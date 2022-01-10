@@ -26,14 +26,19 @@ function draw() {
 function drawStar (aStar) {
     fill ("white")
     circle(aStar.x, aStar.y, 4, "fill")
+    for (let i = 0; i < stars.length; i ++) {
+        //stroke ("white")
+        line(aStar.x, aStar.y, aStar.x + 1, aStar.y + 1)
+        console.log (stars[i])
+    }
 }
 
 
 //events
-document.addEventListener("mousedown", clickHandler);
+document.addEventListener("mousedown", addStar);
 document.addEventListener("mousemove", mousemoveHandler);
 
-function clickHandler(event) {
+function addStar() {
     stars.push({x: mouseX, y: mouseY});
 }
 
