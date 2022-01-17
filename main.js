@@ -27,9 +27,9 @@ function drawStar (aStar) {
     fill ("white")
     circle(aStar.x, aStar.y, 4, "fill")
     for (let i = 0; i < stars.length; i ++) {
-        //stroke ("white")
-        line(aStar.x, aStar.y, aStar.x + 1, aStar.y + 1)
-        console.log (stars[i])
+        stroke ("white")
+        line(stars[i].x, stars[i].y, stars[i].x, stars[i].y);
+        //console.log (aStar) 
     }
 }
 
